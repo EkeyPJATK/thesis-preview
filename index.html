@@ -5,9 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>EKeyPJATK, praca inżynierska - podgląd PDF</title>
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f7f7f7;
+        --accent: #c00;
+        --text: #222;
+        --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: var(--bg);
+        font-family: var(--font);
+        color: var(--text);
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      header a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border: 2px solid var(--accent);
+        padding: 0.4rem 1rem;
+        border-radius: 0.4rem;
+        transition: all 0.2s ease;
+      }
+
+      header a:hover {
+        background: var(--accent);
+        color: white;
+      }
+
+      iframe {
+        width: 100%;
+        height: calc(100vh - 72px);
+        border: none;
+      }
+
+      @media (max-width: 768px) {
+        header a {
+          font-size: 1rem;
+          padding: 0.3rem 0.8rem;
+        }
+
+        iframe {
+          height: calc(100vh - 64px);
+        }
+      }
+    </style>
   </head>
   <body>
-    <
     <header>
       <a href="engineer.pdf" target="_blank" rel="noopener"
         >Otwórz pełny PDF w nowej karcie</a
